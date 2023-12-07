@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item</title>
+</head>
+<body>
+
+<h2>{{ item.name }}</h2>
+<h3>{{ item.description }}</h3>
+<h4>${{ item.price }}</h4>
+<button onclick="redirectToCheckout({{ item.id }})">Buy</button>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    function redirectToCheckout(itemId) {
+        fetch('/buy/' + itemId)
+            .then(response => response.json())
+            .then(data => {
+                var stripe = Stripe('{{ stripe_public_key }}');
+                stripe.redirectToCheckout({ sessionId: data.session_id });
+            })
+            .catch(error => console.error('Error:', error));
+    }
+</script>
+
+
+</body>
+</html>

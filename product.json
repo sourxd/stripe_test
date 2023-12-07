@@ -1,0 +1,20 @@
+[
+  {
+    "model": "test_api.product",
+    "pk": 1,
+    "fields": {
+      "name": "MacBook Pro (14-inch, 2023) 512GB",
+      "description": "8-core CPU 10-core GPU 8GB Unified Memory 512GB SSD Storage",
+      "price": 1599
+    }
+  },
+  {
+    "model": "test_api.product",
+    "pk": 2,
+    "fields": {
+      "name": "MacBook Pro (14-inch, 2023) 1TB",
+      "description": "8-core CPU 10-core GPU 8GB Unified Memory 1TB SSD Storage",
+      "price": 1799
+    }
+  }
+]
