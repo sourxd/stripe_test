@@ -17,13 +17,21 @@
   получение session_id и далее с помощью JS библиотеки Stripe происходить редирект на Checkout форму
   stripe.redirectToCheckout(sessionId=session_id)
 
+Бонусные задачи
+
+	Запуск используя Docker
+	Использование environment variables
+	Просмотр Django Моделей в Django Admin панели
+	Запуск приложения на удаленном сервере, доступном для тестирования
+
 Запуск в Docker
 
-- Первый запуск:
-#### 1. docker-compose build
-#### 2. python manage.py migrate
-#### 3. python manage.py loaddata product.json
-#### 4. python manage.py createsuperuser /// создайте суперпользователя
-#### 5. docker-compose up
-Последующие запуски:
-#### 1. docker-compose up
+	Первый запуск:
+	 1. docker-compose build
+	 2. python manage.py migrate
+	 3. python manage.py loaddata product.json
+	 4. python manage.py createsuperuser /// создайте суперпользователя
+	 5. docker-compose up
+
+	Последующие запуски:
+	 1. docker-compose up
